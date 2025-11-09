@@ -1,29 +1,61 @@
-# REPO_NAME
+# Averer-Websdk-Quickstart
 
 ## Description
 
-- Provide a short description about the repository.
+This repository provides a quick start guide and example integration for using the Averer Web SDK.
 
-## Index
+Follow the steps below to clone, configure, and run the project locally.
 
-- Contents for readme.
+## 🚀 Getting Started
 
-## Pre-requisites/Assumptions
+1. Clone the Repository
 
-- Any pre-requisites or assumptions before working with repository
+```shell
+git clone https://github.com/Averer/averer-websdk-quickstart.git
+cd averer-websdk-quickstart
+```
 
-## How to Install/Run
+2. Configure .npmrc
 
-- How to install or run the code in repository
+To install the Averer Web SDK from GitHub Packages, add the following content inside .npmrc :
 
-## How Test
+```
+@redbellynetwork:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
 
-- Steps to test the code in repository or add new tests
+3. Generate a GitHub Personal Access Token (PAT)
 
-## Features
+You’ll need a GitHub token with permission to read private packages.
 
-- Features of the codebase in repository
+- Follow this [GitHub guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create a Personal Access Token.
 
-## Developer notes
+- When creating the token, make sure to enable the read:packages permission.
 
-- How to create packages and release
+- Export your token as an environment variable:
+
+```
+export GITHUB_TOKEN=your_generated_token_here
+```
+
+4. Install Dependencies
+
+Once your .npmrc is set up and the token is configured, install the dependencies:
+
+```shell
+npm install
+```
+
+5. Run the Example
+
+Start the development server:
+
+```shell
+npm run dev
+```
+
+By default, the app will be served at (http://localhost:3000)
+
+6. Start Integrating the SDK
+
+You can now explore the code to see how the Averer Web SDK is integrated and start modifying it for your use case.
