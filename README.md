@@ -20,7 +20,7 @@ cd averer-websdk-quickstart
 To install the Averer Web SDK from GitHub Packages, add the following content inside .npmrc :
 
 ```
-@redbellynetwork:registry=https://npm.pkg.github.com
+@averer:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
