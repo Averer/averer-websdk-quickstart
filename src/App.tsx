@@ -1,20 +1,17 @@
 import "./App.css";
-import {
-  AvererSdkProvider,
-  AvererWebSdk,
-} from "@redbellynetwork/averer-websdk";
+import { AvererSdkProvider, AvererWebSdk } from "@averer/averer-websdk";
 
 function App() {
   const sdkQuery = [
     {
       id: 5,
-      circuitId: "credentialAtomicQuerySigV2",
+      circuitId: "credentialAtomicQueryMTPV2",
       subjectTitle: "18 + Years Old",
       query: {
         allowedIssuers: ["*"],
         type: "EssentialIdCredential",
         context:
-          "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/EssentialIdCredential.json",
+          "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/EssentialIdCredential.jsonld",
         skipClaimRevocationCheck: true,
         credentialSubject: {
           birthDate: {
