@@ -1,8 +1,13 @@
 import "./App.css";
-import { AvererSdkProvider, AvererWebSdk } from "@averer/averer-websdk";
+import {
+  AvererSdkProvider,
+  AvererWebSdk,
+  type SdkQuery,
+  type SdkSuccessRes,
+} from "@averer/averer-websdk";
 
 function App() {
-  const sdkQuery = [
+  const sdkQuery: SdkQuery = [
     {
       id: 5,
       circuitId: "credentialAtomicQueryMTPV2",
@@ -22,8 +27,11 @@ function App() {
     },
   ];
 
-  const handleSuccess = (data: unknown) => {
-    console.log("Verification successful", data);
+  const handleSuccess = (data: SdkSuccessRes) => {
+    // Check to know if all eligibilty result passed
+    if (data.eligibility.passed) {
+      console.log("Verification successful", data);
+    }
   };
 
   const handleError = (reason: string) => {
