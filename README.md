@@ -46,7 +46,17 @@ Once your .npmrc is set up and the token is configured, install the dependencies
 npm install
 ```
 
-5. Run the Example
+5. Setup env
+
+Create a .env file by copying the .env.sample or use this command
+
+```shell
+cp .env.sample .env
+```
+
+> **Note:** To obtain the `VITE_CONFIG_ID`, please contact Averer support.
+
+6. Run the Example
 
 Start the development server:
 
