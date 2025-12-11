@@ -7,6 +7,7 @@ import {
 } from "@averer/averer-websdk";
 
 function App() {
+  const configId = import.meta.env.VITE_CONFIG_ID;
   const sdkQuery: SdkQuery = [
     {
       id: 5,
@@ -48,7 +49,7 @@ function App() {
         </p>
       </div>
       <div>
-        <AvererSdkProvider environment="testnet">
+        <AvererSdkProvider configId={configId}>
           <AvererWebSdk
             appName="MyAvererApp"
             sdkQuery={sdkQuery}
